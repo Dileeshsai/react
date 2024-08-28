@@ -13,7 +13,7 @@ function Register() {
 
   const handleSubmit = (e) => {
       e.preventDefault()
-      axios.post("https://react-h7en.vercel.app/register", { name, email, password })
+      axios.post("https://react-h7en.vercel.app", { name, email, password })
       .then(result => {console.log(result)
       navigate("/loginForm")
       })
