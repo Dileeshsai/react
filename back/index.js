@@ -5,7 +5,7 @@ const CustomerModel = require("./Customer")
 const app = express()
 app.use(express.json())
 app.use(cors({
-    origin:["https://react-h7en.vercel.app"],
+    origin:["https://react-mj54.vercel.app/Register"],
     methods: ["POST","GET"],
     credentials:true
 }
