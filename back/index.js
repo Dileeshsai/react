@@ -15,6 +15,12 @@ mongoose.connect("mongodb+srv://dileeshsai007:GuafBJ2XRl01AV2q@cluster0.4nsg6.mo
 app.get("/",(req,res)=>{
     res.json("Hello");
 })
+app.use((req, res, next) => {
+       res.setHeader('Access-Control-Allow-Origin', 'https://gym--delta.vercel.app'); // Replace with your frontend domain
+       res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+       res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+       next();
+     });
 app.post("/login", (req, res) => {
     const {email, password} = req.body;
   CustomerModel.findOne({email : email})
