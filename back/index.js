@@ -5,7 +5,7 @@ const CustomerModel = require("./Customer")
 const app = express()
 app.use(cors({
     origin:["https://gym--delta.vercel.app"],
-    methods: ["POST","GET"],
+    methods: ["POST","GET","PUT"],
     credentials:true
 }
 ));
